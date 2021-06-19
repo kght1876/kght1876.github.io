@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules\@fortawesome\fontawesome-free\css\all.min.css">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row g-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <span class="h4 mt-1 ms-5 text-start text-success">
+                    <i class="fas fa-search-dollar"></i>
+                    <span>
+                    Exchange Rates
+                    </span>
+                </span>
+            
+            </nav>
+        </div>
+            <main class="row mt-5">
+                <div class="col-1 d-none d-lg-inline"></div>
+                  <div class="col-sm-12 col-lg-5">
+                    
+                        <div class="card border-success border-3 text-center text-success">
+                            <div class="card-body" style="height: 380px;">
+                                <h3 class="card-title mt-5">Today Exchange Rates</h3>
+                                    <p class="my-5 fs-5">Exchange rates are based on 1US doller.</p>
+                                    <div class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active" data-bs-interval="3000">
+                                                <div style="height: 50px">
+                                                    <span>Myanmar Kyat</span><br>
+                                                    <span id="item1"></span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <div style="height: 50px">
+                                                    <span >China Yuan</span><br>
+                                                    <span id="item2"></span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <div style="height: 50px">
+                                                    <span>Japan Yan</span><br>
+                                                    <span id="item3"></span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <div style="height: 50px">
+                                                    <span>Singapore Doller</span><br>
+                                                    <span id="item4"></span>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="3000">
+                                                <div style="height: 50px">
+                                                    <span>Thai Bath</span><br>
+                                                    <span id="item5"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-sm-12 col-lg-5">
+                        <div class="card border-success border-3" style="height: 380px;">
+                        <div class="card-body text-center text-success mt-5">
+                        <div class="currency">
+                            <select id="from_currency">
+                                <option value="AED">AED</option>
+                                <option value="ANG">ANG</option>
+                                <option value="AOA">AOA</option>
+                                <option value="AUD">AUD</option>
+                                <option value="BDT">BDT</option>
+                                <option value="BND">BND</option>
+                                <option value="CNY">CNY</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="KRW">KRW</option>
+                                <option value="MMK">MMK</option>
+                                <option value="SGD">SGD</option>
+                                <option value="THB">THB</option>
+                                <option value="USD" selected>USD</option>
+                            </select>
+                            <input type="number" id="from_ammount" placeholder="0" value=1 />
+                        </div>
+                        <div class="middle">
+                            <button id="exchange" class="mt-5 text-success">
+                            <i class="fas fa-sync"></i>
+                            </button>
+                            <div class="rate fs-3 my-5" id="rate"></div>
+                            </div>
+                        <div class="currency">
+                            <select id="to_currency">
+                                <option value="AED">AED</option>
+                                <option value="ANG">ANG</option>
+                                <option value="AOA">AOA</option>
+                                <option value="AUD">AUD</option>
+                                <option value="BDT">BDT</option>
+                                <option value="BND">BND</option>
+                                <option value="CNY">CNY</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="KRW">KRW</option>
+                                <option value="MMK" selected>MMK</option>
+                                <option value="SGD">SGD</option>
+                                <option value="THB">THB</option>
+                                <option value="USD">USD</option>
+                            </select>
+                                <input type="number" id="to_ammount" placeholder="0" />
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-1 d-none d-lginline"></div>
+            </main>
+            <footer class="text-center mt-5 py-4 text-muted">
+                &copy; Copyright 2021
+                </footer>
+    </div>
+
+<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+<script src="function.js"></script>
+</body>
+</html>
